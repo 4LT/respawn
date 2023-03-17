@@ -10,12 +10,12 @@ Utility for processing Quake maps by modifying, adding, and deleting entities.
 
 `respawn <input-file>`
 
-    Reads `<input-file>` and spits out a processed map with the same suffixed
-    with "-post".
+Reads `<input-file>` and spits out a processed map with the same suffixed with
+"-post".
 
 `respawn <input-file> <output-file>`
     
-    Same, but with an explicitly provided output filename.
+Same, but with an explicitly provided output filename.
 
 # Features
 
