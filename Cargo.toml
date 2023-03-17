@@ -5,6 +5,7 @@ authors = ["Seth <rader.seth@gmail.com>"]
 edition = "2021"
 description = "Utility for processing Quake source maps"
 license = "CC0-1.0 OR MIT OR Apache-2.0"
+repository = "https://github.com/4LT/respawn/"
 
 
 [dependencies]
