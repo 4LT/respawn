@@ -80,7 +80,9 @@ fn patch_skill_entity(ent: &mut Entity) -> Vec<Entity> {
                 None
             } else {
                 for (key, value) in &ent.edict {
-                    patch_edict.insert(key.clone(), value.clone());
+                    if !patch_edict.contains_key(key) {
+                        patch_edict.insert(key.clone(), value.clone());
+                    }
                 }
 
                 let spawnflags_key = CString::new("spawnflags").unwrap();
