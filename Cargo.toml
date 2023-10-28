@@ -1,6 +1,6 @@
 [package]
 name = "respawn"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Seth <rader.seth@gmail.com>"]
 edition = "2021"
 description = "Utility for processing Quake source maps"

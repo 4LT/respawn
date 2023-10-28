@@ -10,7 +10,7 @@ checksum = "d416d5ea2cfb08d591277e47a4603d1fc4eb98fc783a5a2d0477c88f44d77617"
 
 [[package]]
 name = "respawn"
-version = "0.1.0"
+version = "0.1.2"
 dependencies = [
  "quake-util",
 ]
