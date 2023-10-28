@@ -21,12 +21,12 @@ Same, but with an explicitly provided output filename.
 
 ## Skill patching
 
-Entities with keys starting with "easy:", "medium:", or "hard:" will be copied
+Entities with keys starting with "easy:", "normal:", or "hard:" will be copied
 and patched.
 
 E.g. a trigger\_counter with a key/value pair of `"hard:count" "4"` will be
 copied into a new entity with the same keys and values, but with `count` set to
-4 and `spawnflags` set appropriately ("Not on easy" and "Not on medium").
+4 and `spawnflags` set appropriately ("Not on easy" and "Not on normal").
 
 # License
 

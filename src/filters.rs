@@ -3,14 +3,14 @@ use std::cell::RefCell;
 use quake_util::qmap::{QuakeMap, Entity, Edict};
 
 const NOT_EASY_FLAG: i32 = 1 << 8;
-const NOT_MEDIUM_FLAG: i32 = 1 << 9;
+const NOT_NORMAL_FLAG: i32 = 1 << 9;
 const NOT_HARD_FLAG: i32 = 1 << 10;
 
-const SKILL_MASK: i32 = NOT_EASY_FLAG | NOT_MEDIUM_FLAG | NOT_HARD_FLAG;
+const SKILL_MASK: i32 = NOT_EASY_FLAG | NOT_NORMAL_FLAG | NOT_HARD_FLAG;
 
-const EASY_ONLY_FLAGS: i32 = NOT_MEDIUM_FLAG | NOT_HARD_FLAG;
-const MEDIUM_ONLY_FLAGS: i32 = NOT_EASY_FLAG | NOT_HARD_FLAG;
-const HARD_ONLY_FLAGS: i32 = NOT_EASY_FLAG | NOT_MEDIUM_FLAG;
+const EASY_ONLY_FLAGS: i32 = NOT_NORMAL_FLAG | NOT_HARD_FLAG;
+const NORMAL_ONLY_FLAGS: i32 = NOT_EASY_FLAG | NOT_HARD_FLAG;
+const HARD_ONLY_FLAGS: i32 = NOT_EASY_FLAG | NOT_NORMAL_FLAG;
 
 pub fn patch_skill(map: &mut QuakeMap) {
     let mut new_ents = Vec::new();
@@ -35,9 +35,9 @@ fn patch_skill_entity(ent: &mut Entity) -> Vec<Entity> {
             EASY_ONLY_FLAGS,
         ),
         (
-            &b"medium:"[..],
+            &b"normal:"[..],
             RefCell::new(Edict::new()),
-            MEDIUM_ONLY_FLAGS,
+            NORMAL_ONLY_FLAGS,
         ),
         (
             &b"hard:"[..],
